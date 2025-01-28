@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #6c63ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+.card {
+  background: #fdfdfd;
+  border-radius: 8px;
+  width: 90vw; /* Máximo 90% del ancho de la pantalla */
+  max-width: 600px; /* Ancho máximo */
+  height: 90vh; /* Máximo 90% de la altura de la pantalla */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+img.birthday {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: 40vh; /* Asigna un 40% de la altura de la pantalla para la imagen */
+  object-fit: contain; /* Asegura que la imagen no se recorte ni distorsione */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.text {
+  padding: 1em;
+  color: #333;
+  font-size: 1rem; /* Ajuste base del texto */
+  line-height: 1.5;
+  overflow-y: auto; /* Desplazamiento vertical para texto largo */
+  flex: 1; /* Rellena el espacio disponible debajo de la imagen */
+}
+
+.muted {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.space {
+  height: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .text {
+    font-size: 0.9rem; /* Texto más pequeño en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 0.8rem; /* Texto más compacto en pantallas pequeñas */
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+}
