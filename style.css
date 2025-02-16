@@ -10,7 +10,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   transition: all 0.25s ease-in-out;
-  overflow: hidden;
 }
 
 #password-container {
