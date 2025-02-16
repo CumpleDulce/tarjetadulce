@@ -1,23 +1,31 @@
-<!doctype html>
+<<!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Feliz Cumpleaños Dulce!</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz 18 Años Dulce! 🎉</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="password-container">
-    <h2>Introduce la contraseña para ver la tarjeta</h2>
-    <input type="password" id="password-input" placeholder="Contraseña">
-    <button onclick="checkPassword()">Enviar</button>
-  </div>
-  <div id="content" class="card">
-    <img src="https://github.com/DzarelDeveloper/Img/blob/main/ulangtahun.jpg?raw=true" alt="birthday" class="birthday">
-    <div class="text">
-      <h1>¡Hola Dulce!</h1>
+    <div id="password-container">
+        <div class="password-box">
+            <div class="lock-icon">🔒</div>
+            <h2>Ingresa la palabra mágica</h2>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Tu secreto...">
+                <button onclick="checkPassword()">Abrir corazón</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="card">
+        <div class="card-inner">
+            <img src="https://github.com/DzarelDeveloper/Img/blob/main/ulangtahun.jpg?raw=true" 
+                 alt="Birthday" class="birthday">
+            <div class="letter">
+                <div class="letter-content">
+                    <h1 class="animated-title">Para Dulce 💖</h1>
+                    <div class="message">
       <p>
         Hoy es un día especial porque celebramos la existencia de una de las personas más geniales de este planeta: vos.
         Es increíble pensar que tengo la bendición de compartir el mismo país, de mirar las mismas estrellas, de estar bajo el mismo sol y luna, y, lo más importante, de tener el mismo Padre celestial.
@@ -34,18 +42,19 @@
     </div>
   </div>
 
-  <script>
+   <script>
     function checkPassword() {
-      const password = document.getElementById('password-input').value;
-      const correctPassword = 'Dulce'; // Contraseña correcta
-      if (password === correctPassword) {
-        document.getElementById('password-container').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-      } else {
-        alert('Contraseña incorrecta, intenta de nuevo.');
-      }
+        const password = document.getElementById('password-input').value;
+        if(password === 'Dulce') {
+            document.getElementById('password-container').classList.add('fade-out');
+            document.getElementById('content').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('password-container').style.display = 'none';
+            }, 500);
+        } else {
+            alert('❌ La clave del corazón es tu nombre... ¡Intenta de nuevo!');
+        }
     }
-  </script>
+    </script>
 </body>
-
 </html>
