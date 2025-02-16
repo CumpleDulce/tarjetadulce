@@ -84,27 +84,25 @@ button:hover {
     box-sizing: border-box;
 }
 
-/* Ajustes para la imagen */
-.birthday {
-    width: 100%;
-    height: auto; /* Ajusta la altura automáticamente */
-    max-height: 50vh; /* Limita la altura máxima al 50% de la pantalla */
-    object-fit: contain; /* Muestra la imagen completa sin recortes */
-    border-bottom: 3px solid #fff0f6;
-}
-
-/* Ajustes para la carta */
 .card {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    height: auto; /* Altura automática */
-    max-height: 90vh; /* Limita la altura máxima al 90% de la pantalla */
-    overflow-y: auto; /* Scroll interno si es necesario */
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+
+.birthday {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    border-bottom: 3px solid #fff0f6;
 }
 
 .letter {
@@ -139,27 +137,4 @@ h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.2rem;
     color: #ff6f61;
-}
-
-/* Media Queries para Android */
-@media (max-width: 480px) {
-    .password-box {
-        padding: 15px;
-    }
-
-    .card {
-        height: 85vh;
-    }
-
-    .birthday {
-        height: 150px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .message {
-        font-size: 0.85rem;
-    }
 }
