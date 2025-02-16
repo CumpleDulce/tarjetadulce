@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
-  background: #6c63ff;
+  background: #f0e6f6; /* Fondo pastel */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: #333;
   transition: all 0.25s ease-in-out;
 }
 
@@ -19,19 +19,22 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: #6c63ff;
+  background: #f0e6f6; /* Fondo pastel */
 }
 
 #password-container h2 {
   margin-bottom: 20px;
+  color: #6c63ff; /* Color pastel */
 }
 
 #password-container input {
   padding: 10px;
   font-size: 1rem;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #6c63ff; /* Borde pastel */
   margin-bottom: 10px;
+  background: #fff;
+  color: #333;
 }
 
 #password-container button {
@@ -39,13 +42,14 @@ body {
   font-size: 1rem;
   border-radius: 5px;
   border: none;
-  background: #333;
+  background: #6c63ff; /* Color pastel */
   color: #fff;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 #password-container button:hover {
-  background: #555;
+  background: #5a52cc; /* Color pastel más oscuro */
 }
 
 #content {
@@ -53,12 +57,12 @@ body {
 }
 
 .card {
-  background: #fdfdfd;
+  background: #fff;
   border-radius: 8px;
   width: 90vw; /* Máximo 90% del ancho de la pantalla */
   max-width: 600px; /* Ancho máximo */
   height: 90vh; /* Máximo 90% de la altura de la pantalla */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -67,7 +71,7 @@ body {
 img.birthday {
   width: 100%; /* Asegura que la imagen ocupe todo el ancho */
   height: 40vh; /* Asigna un 40% de la altura de la pantalla para la imagen */
-  object-fit: contain; /* Asegura que la imagen no se recorte ni distorsione */
+  object-fit: cover; /* Asegura que la imagen no se recorte ni distorsione */
   border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
 }
 
@@ -83,10 +87,7 @@ img.birthday {
 .muted {
   opacity: 0.8;
   font-size: 0.9rem;
-}
-
-.space {
-  height: 20px;
+  color: #6c63ff; /* Color pastel */
 }
 
 /* Media Queries */
