@@ -1,28 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday</title>
+  <title>¡Feliz Cumpleaños Dulce!</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div id="password-container">
+  <div id="password-container">
     <h2>Introduce la contraseña para ver la tarjeta</h2>
     <input type="password" id="password-input" placeholder="Contraseña">
     <button onclick="checkPassword()">Enviar</button>
   </div>
-  <div class="card">
-    <img src="https://github.com/DzarelDeveloper/Img/blob/main/ulangtahun.jpg?raw=true"
-      alt="birthday" class="birthday">
-
+  <div id="content" class="card">
+    <img src="https://github.com/DzarelDeveloper/Img/blob/main/ulangtahun.jpg?raw=true" alt="birthday" class="birthday">
     <div class="text">
-      <h1>Hola Dulcee!</h1>
+      <h1>¡Hola Dulce!</h1>
       <p>
         Hoy es un día especial porque celebramos la existencia de una de las personas más geniales de este planeta: vos.
-Es increíble pensar que tengo la bendición de compartir el mismo país, de mirar las mismas estrellas, de estar bajo el mismo sol y luna, y, lo más importante, de tener el mismo Padre celestial.
+        Es increíble pensar que tengo la bendición de compartir el mismo país, de mirar las mismas estrellas, de estar bajo el mismo sol y luna, y, lo más importante, de tener el mismo Padre celestial.
         <br><br>
         Dios bendiga tu vida hoy y siempre, Dulce. Qué alegría es saber que cumples 18 años, una meta importante en tu vida. Hoy comienzas una nueva etapa, y es un privilegio acompañarte en este momento en el que te conviertes oficialmente en adulta.
         <br><br>
@@ -30,16 +28,17 @@ Es increíble pensar que tengo la bendición de compartir el mismo país, de mir
         <br><br>
         Mi oración es que este año, con la bendición del Señor, sea un capítulo lleno de felicidad, éxito y propósito. Gracias por ser parte de mi vida y dejar huellas imborrables en ella.
         <br><br>
-        ¡Feliz cumpleaños, Dulce! Que cada uno de tus días esté lleno de alegría, amor y todo tus anhelos.
+        ¡Feliz cumpleaños, Dulce! Que cada uno de tus días esté lleno de alegría, amor y todos tus anhelos.
       </p>
-      <p class="muted">- Rodrigo Beraud-</p>
+      <p class="muted">- Rodrigo Beraud -</p>
     </div>
+  </div>
 
   <script>
     function checkPassword() {
       const password = document.getElementById('password-input').value;
-      const correctPassword = 'Dulce'; // Reemplaza 'tu_contraseña' con la contraseña correcta
-      if(password === correctPassword) {
+      const correctPassword = 'Dulce'; // Contraseña correcta
+      if (password === correctPassword) {
         document.getElementById('password-container').style.display = 'none';
         document.getElementById('content').style.display = 'block';
       } else {
