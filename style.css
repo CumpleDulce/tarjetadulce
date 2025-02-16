@@ -1,24 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 #content {
   display: none;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background: #6c63ff;
+#password-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
-  transition: all 0.25s ease-in-out;
-  overflow: hidden;
+  width: 100vw;
 }
 
 .card {
