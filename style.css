@@ -20,6 +20,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: #f0e6f6; /* Fondo pastel */
+  text-align: center; /* Centrar texto */
 }
 
 #password-container h2 {
@@ -35,6 +36,8 @@ body {
   margin-bottom: 10px;
   background: #fff;
   color: #333;
+  width: 80%; /* Ancho del input */
+  max-width: 300px; /* Ancho máximo */
 }
 
 #password-container button {
@@ -46,6 +49,8 @@ body {
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 80%; /* Ancho del botón */
+  max-width: 300px; /* Ancho máximo */
 }
 
 #password-container button:hover {
@@ -54,40 +59,50 @@ body {
 
 #content {
   display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   background: #fff;
   border-radius: 8px;
-  width: 90vw; /* Máximo 90% del ancho de la pantalla */
+  width: 90%; /* Ancho relativo */
   max-width: 600px; /* Ancho máximo */
-  height: 90vh; /* Máximo 90% de la altura de la pantalla */
+  height: auto; /* Altura automática */
+  min-height: 80vh; /* Altura mínima */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centrar contenido horizontalmente */
   overflow: hidden;
+  margin: 20px; /* Margen para evitar que toque los bordes */
 }
 
 img.birthday {
   width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-  height: 40vh; /* Asigna un 40% de la altura de la pantalla para la imagen */
+  height: 40vh; /* Altura fija para la imagen */
   object-fit: cover; /* Asegura que la imagen no se recorte ni distorsione */
   border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
 }
 
 .text {
-  padding: 1em;
+  padding: 20px;
   color: #333;
   font-size: 1rem; /* Ajuste base del texto */
   line-height: 1.5;
   overflow-y: auto; /* Desplazamiento vertical para texto largo */
   flex: 1; /* Rellena el espacio disponible debajo de la imagen */
+  text-align: center; /* Centrar texto */
+  width: 100%; /* Ancho completo */
 }
 
 .muted {
   opacity: 0.8;
   font-size: 0.9rem;
   color: #6c63ff; /* Color pastel */
+  text-align: center; /* Centrar texto */
 }
 
 /* Media Queries */
