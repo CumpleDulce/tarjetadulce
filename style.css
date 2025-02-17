@@ -93,46 +93,48 @@ button:hover {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 90%; /* Ancho relativo */
+    max-width: 500px; /* Aumentar el ancho máximo */
     height: auto;
-    max-height: 90vh;
+    max-height: 85vh; /* Reducir la altura máxima */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    margin: 20px; /* Margen para evitar que toque los bordes */
 }
 
 .birthday {
     width: 100%;
     height: auto;
-    max-height: 50vh;
-    object-fit: contain;
+    max-height: 40vh; /* Reducir el tamaño máximo de la imagen */
+    object-fit: contain; /* Mostrar la imagen completa sin recortes */
     border-bottom: 3px solid #fff0f6;
 }
 
 .letter {
     flex: 1;
-    padding: 20px;
+    padding: 25px; /* Aumentar el padding */
     overflow-y: auto;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Aumentar el tamaño del título */
     color: #ff6f61;
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0; /* Ajustar márgenes */
 }
 
 .message {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 1rem; /* Aumentar el tamaño del texto */
+    line-height: 1.8; /* Mejorar la legibilidad */
     text-align: justify;
     hyphens: auto;
+    margin-bottom: 20px; /* Espacio adicional */
 }
 
 .signature {
-    margin-top: 20px;
+    margin-top: 25px; /* Más espacio para la firma */
     text-align: right;
     font-style: italic;
     color: #a18ab1;
@@ -140,6 +142,6 @@ h1 {
 
 .name {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Aumentar el tamaño de la firma */
     color: #ff6f61;
 }
