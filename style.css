@@ -1,15 +1,11 @@
-/* Estilos generales */
+/* style.css */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     color: #5a4a6a;
-    overflow: hidden; /* Evitar scroll en el body */
+    overflow: hidden;
 }
 
 /* Contenedor de contraseña */
@@ -17,129 +13,108 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1000;
 }
 
 .password-box {
     background: white;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
+    width: 85%;
     max-width: 300px;
-}
-
-.lock-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ff6f61;
-}
-
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #5a4a6a;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #e0d3e9;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #ff4a3d;
+    text-align: center;
 }
 
 /* Contenido de la carta */
 #content {
-    display: none; /* Oculto inicialmente */
-    width: 100%;
-    height: 100vh; /* Pantalla completa */
-    background: white; /* Fondo blanco */
+    display: none;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    background: white;
     z-index: 999;
-    overflow-y: auto; /* Habilitar scroll interno */
 }
 
-.card {
-    background: white;
+/* Contenedor de imagen con relación de aspecto 736x1074 */
+.image-container {
     width: 100%;
-    height: 100%; /* Pantalla completa */
-    display: flex;
-    flex-direction: column;
+    padding-top: 146%; /* (1074/736)*100 para mantener relación de aspecto */
+    position: relative;
+    background: white;
 }
 
 .birthday {
-    width: 100%;
-    height: 30vh; /* Altura reducida para la imagen */
-    object-fit: contain; /* Mostrar la imagen completa sin recortes */
-    position: sticky; /* Fija la imagen en la parte superior */
+    position: absolute;
     top: 0;
-    z-index: 1; /* Asegurar que esté sobre el texto */
-    background: white; /* Fondo blanco para la imagen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Muestra toda la imagen sin recortes */
 }
 
+/* Área de texto con scroll */
 .letter {
-    flex: 1;
-    padding: 25px; /* Aumentar el padding */
-    background: white; /* Fondo blanco para el texto */
-    z-index: 2; /* Asegurar que el texto esté sobre la imagen */
-    margin-top: -20px; /* Superponer el texto sobre la imagen */
-    border-radius: 20px 20px 0 0; /* Bordes redondeados en la parte superior */
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); /* Sombra para separar la imagen del texto */
+    position: absolute;
+    top: 40%; /* Empieza debajo de la imagen */
+    left: 0;
+    width: 100%;
+    height: 60vh; /* Altura ajustable */
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 25px 25px 0 0;
+    overflow-y: auto;
+    transform: translateY(-20px); /* Superposición con la imagen */
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem; /* Aumentar el tamaño del título */
     color: #ff6f61;
+    font-size: 2.3rem;
     text-align: center;
-    margin: 15px 0; /* Ajustar márgenes */
+    margin: 0 0 1.5rem 0;
 }
 
 .message {
-    font-size: 1rem; /* Aumentar el tamaño del texto */
-    line-height: 1.8; /* Mejorar la legibilidad */
+    font-size: 0.95rem;
+    line-height: 1.7;
     text-align: justify;
     hyphens: auto;
-    margin-bottom: 20px; /* Espacio adicional */
+    margin-bottom: 1.5rem;
 }
 
 .signature {
-    margin-top: 25px; /* Más espacio para la firma */
     text-align: right;
     font-style: italic;
     color: #a18ab1;
+    margin-top: 2rem;
 }
 
 .name {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem; /* Aumentar el tamaño de la firma */
     color: #ff6f61;
+    font-size: 1.4rem;
+}
+
+/* Scroll personalizado */
+.letter::-webkit-scrollbar {
+    width: 6px;
+}
+
+.letter::-webkit-scrollbar-track {
+    background: #fff0f6;
+}
+
+.letter::-webkit-scrollbar-thumb {
+    background: #ff6f61;
+    border-radius: 3px;
 }
