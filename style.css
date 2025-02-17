@@ -97,15 +97,14 @@ button:hover {
 
 .birthday {
     width: 100%;
-    height: auto;
-    max-height: 40vh; /* Reducir el tamaño máximo de la imagen */
-    object-fit: cover; /* Cubrir el área sin distorsión */
-    border-bottom: 3px solid #fff0f6;
-    position: sticky; /* Efecto de desplazamiento */
-    top: 0; /* Se pega en la parte superior */
+    height: 30vh; /* Altura reducida para la imagen */
+    object-fit: contain; /* Mostrar la imagen completa sin recortes */
+    position: sticky; /* Fija la imagen en la parte superior */
+    top: 0;
     z-index: 1; /* Asegurar que esté sobre el texto */
-    transition: transform 0.3s ease; /* Transición suave */
+    background: white; /* Fondo blanco para la imagen */
 }
+
 .letter {
     flex: 1;
     padding: 25px; /* Aumentar el padding */
