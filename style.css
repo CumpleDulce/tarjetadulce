@@ -97,7 +97,7 @@ button:hover {
 
 .birthday {
     width: 100%;
-    height: 60vh; /* Altura fija para la imagen */
+    height: 35vh; /* Altura fija para la imagen */
     object-fit: cover; /* Cubrir el área sin distorsión */
     position: sticky; /* Fija la imagen en la parte superior */
     top: 0;
