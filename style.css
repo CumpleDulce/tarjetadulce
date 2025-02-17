@@ -9,6 +9,7 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #5a4a6a;
+    overflow: hidden; /* Evitar scroll en el body */
 }
 
 /* Contenedor de contraseña */
@@ -77,7 +78,7 @@ button:hover {
 #content {
     display: none; /* Oculto inicialmente */
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinear al inicio para el scroll */
     width: 100%;
     height: 100vh;
     background: white; /* Fondo blanco */
@@ -87,6 +88,7 @@ button:hover {
     z-index: 999;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto; /* Habilitar scroll interno */
 }
 
 .card {
@@ -96,25 +98,31 @@ button:hover {
     width: 90%; /* Ancho relativo */
     max-width: 500px; /* Aumentar el ancho máximo */
     height: auto;
-    max-height: 85vh; /* Reducir la altura máxima */
-    overflow-y: auto;
+    min-height: 100vh; /* Altura mínima para el scroll */
     display: flex;
     flex-direction: column;
-    margin: 20px; /* Margen para evitar que toque los bordes */
+    position: relative; /* Para el efecto de scroll */
 }
 
 .birthday {
     width: 100%;
     height: auto;
     max-height: 40vh; /* Reducir el tamaño máximo de la imagen */
-    object-fit: contain; /* Mostrar la imagen completa sin recortes */
+    object-fit: cover; /* Cubrir el área sin distorsión */
     border-bottom: 3px solid #fff0f6;
+    position: sticky; /* Efecto de desplazamiento */
+    top: 0; /* Se pega en la parte superior */
+    z-index: 1; /* Asegurar que esté sobre el texto */
+    transition: transform 0.3s ease; /* Transición suave */
 }
 
 .letter {
     flex: 1;
     padding: 25px; /* Aumentar el padding */
-    overflow-y: auto;
+    position: relative;
+    z-index: 2; /* Asegurar que el texto esté sobre la imagen */
+    background: white; /* Fondo blanco para el texto */
+    margin-top: -20px; /* Superponer el texto sobre la imagen */
 }
 
 h1 {
@@ -144,4 +152,19 @@ h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem; /* Aumentar el tamaño de la firma */
     color: #ff6f61;
+}
+
+/* Efecto de scroll continuo */
+@keyframes scrollEffect {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20%);
+    }
+}
+
+/* Aplicar el efecto de scroll */
+.card.scrolling .birthday {
+    animation: scrollEffect 1s ease-out forwards;
 }
