@@ -44,22 +44,6 @@ body {
     z-index: 999;
 }
 
-/* Contenedor de imagen con relación de aspecto 736x1074 */
-.image-container {
-    width: 100%;
-    padding-top: 146%; /* (1074/736)*100 para mantener relación de aspecto */
-    position: relative;
-    background: white;
-}
-
-.birthday {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Muestra toda la imagen sin recortes */
-}
 
 /* Área de texto con scroll */
 .letter {
