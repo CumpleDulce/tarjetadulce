@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Feliz 18 Años Dulce! 🎂</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Contenedor de contraseña -->
@@ -16,26 +18,28 @@
             <button onclick="checkPassword()">Abrir</button>
         </div>
     </div>
+
+    <!-- Contenido de la carta (oculto por defecto) -->
+    <div id="content">
         <div class="letter">
             <h1>Para Dulce 💖</h1>
             <div class="message">
-                    <p>
-                        Hoy es un día especial porque celebramos la existencia de una de las personas más geniales de este planeta: vos.
-                        Es increíble pensar que tengo la bendición de compartir el mismo país, de mirar las mismas estrellas, de estar bajo el mismo sol y luna, y, lo más importante, de tener el mismo Padre celestial.
-                        <br><br>
-                        Dios bendiga tu vida hoy y siempre, Dulce. Qué alegría es saber que cumples 18 años, una meta importante en tu vida. Hoy comienzas una nueva etapa, y es un privilegio acompañarte en este momento en el que te conviertes oficialmente en adulta, la música qué está en la carta representa mi oración y bendición para tu vida.
-                        <br><br>
-                        En todo este tiempo que te he conocido, he visto cómo has estado presente tanto en los momentos felices como en los difíciles. Pude ver ese corazón tan hermoso y entregado al Señor, que refleja su amor, luz y misericordia. A través de tu vida, Dios demuestra su bondad y su obra maravillosa. Tu disposición y tu amor conmueve mi corazón y, estoy seguro, también el de muchas otras personas.
-                        <br><br>
-                        Mi oración es que este año, con la bendición del Señor, sea un capítulo lleno de felicidad, éxito y propósito. Gracias por ser parte de mi vida y dejar huellas imborrables en ella.
-                        <br><br>
-                        ¡Feliz cumpleaños, Dulce! Que cada uno de tus días esté lleno de alegría, amor y todos tus anhelos.
-                    </p>
-                </div>
-                <div class="signature">
-                    <p>Con cariño,</p>
-                    <p class="name">Rodrigo Beraud</p>
-                </div>
+                <p>
+                    Hoy es un día especial porque celebramos la existencia de una de las personas más geniales de este planeta: vos.
+                    Es increíble pensar que tengo la bendición de compartir el mismo país, de mirar las mismas estrellas, de estar bajo el mismo sol y luna, y, lo más importante, de tener el mismo Padre celestial.
+                    <br><br>
+                    Dios bendiga tu vida hoy y siempre, Dulce. Qué alegría es saber que cumples 18 años, una meta importante en tu vida. Hoy comienzas una nueva etapa, y es un privilegio acompañarte en este momento en el que te conviertes oficialmente en adulta, la música qué está en la carta representa mi oración y bendición para tu vida.
+                    <br><br>
+                    En todo este tiempo que te he conocido, he visto cómo has estado presente tanto en los momentos felices como en los difíciles. Pude ver ese corazón tan hermoso y entregado al Señor, que refleja su amor, luz y misericordia. A través de tu vida, Dios demuestra su bondad y su obra maravillosa. Tu disposición y tu amor conmueve mi corazón y, estoy seguro, también el de muchas otras personas.
+                    <br><br>
+                    Mi oración es que este año, con la bendición del Señor, sea un capítulo lleno de felicidad, éxito y propósito. Gracias por ser parte de mi vida y dejar huellas imborrables en ella.
+                    <br><br>
+                    ¡Feliz cumpleaños, Dulce! Que cada uno de tus días esté lleno de alegría, amor y todos tus anhelos.
+                </p>
+            </div>
+            <div class="signature">
+                <p>Con cariño,</p>
+                <p class="name">Rodrigo Beraud</p>
             </div>
         </div>
     </div>
@@ -44,10 +48,13 @@
         function checkPassword() {
             const password = document.getElementById('password-input').value;
             if (password === 'DulceFeliz18GodLove') {
-                document.getElementById('password-container').style.display = 'none';
-                document.getElementById('content').style.display = 'flex'; // Mostrar el contenido
+                document.getElementById('password-container').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('password-container').style.display = 'none';
+                    document.getElementById('content').style.display = 'flex';
+                }, 500);
             } else {
-                alert('❌ La clave esta en las pitas... ¡Intenta de nuevo!');
+                alert('❌ La clave está en las pistas... ¡Intenta de nuevo!');
             }
         }
     </script>
